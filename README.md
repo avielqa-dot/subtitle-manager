@@ -3,166 +3,193 @@
 [![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/github/license/Avielzi/subtitle-manager?style=for-the-badge)](LICENSE)
 
-[English](#english) | [עברית](#hebrew)
+## 📚 Table of Contents
+
+*   [English](#english)
+    *   [Project Overview](#project-overview)
+    *   [Features](#features)
+    *   [Installation](#installation)
+    *   [Usage](#usage)
+    *   [Dependencies](#dependencies)
+    *   [Contributing](#contributing)
+    *   [License](#license)
+*   [עברית](#hebrew)
+    *   [סקירת פרויקט](#סקירת-פרויקט)
+    *   [תכונות](#תכונות)
+    *   [התקנה](#התקנה)
+    *   [שימוש](#שימוש)
+    *   [תלויות](#תלויות)
+    *   [תרומה לפרויקט](#תרומה-לפרויקט)
+    *   [רישיון](#רישיון)
+
+---
 
 <a name="english"></a>
 
 ## 🇬🇧 English
 
-### Project Description
+### Project Overview
 
-This project provides a robust Subtitle Manager, designed to simplify the process of handling subtitles for media files. It includes a setup and dependency management script to ensure a smooth installation and execution experience. The tool is built with Python and offers functionalities for checking system status, installing necessary packages, running the main application, and performing a clean uninstallation.
+The **Subtitle Manager** is a robust Python-based tool designed to streamline the process of managing subtitles for various media files. It provides a comprehensive solution for checking system compatibility, installing necessary dependencies, launching the main application, and performing clean uninstallation of its components. This project aims to offer a user-friendly experience through an interactive command-line interface, ensuring that users can easily maintain their subtitle environment.
 
 ### Features
 
-*   **Python Version Check**: Ensures compatibility with Python 3.8+.
-*   **Dependency Management**: Automatically installs and tracks required Python packages (`subliminal`, `babelfish`).
-*   **Tkinter Check**: Verifies the availability of Tkinter for the GUI.
-*   **Interactive Menu**: Provides a command-line interface for easy interaction.
-*   **Clean Uninstall**: Removes only the packages installed by this setup script, preventing interference with other user-installed packages.
-*   **Application Launch**: Installs dependencies if needed and launches the main GUI application.
+*   **Python Version Compatibility**: Automatically verifies that the installed Python version meets the minimum requirement of 3.8+.
+*   **Automated Dependency Management**: Installs and tracks essential Python packages such as `subliminal` and `babelfish`, ensuring a functional environment.
+*   **Tkinter GUI Check**: Confirms the availability of Tkinter, which is crucial for the graphical user interface of the Subtitle Manager.
+*   **Interactive Command-Line Interface**: Offers an intuitive menu-driven system for easy interaction, allowing users to perform various operations with simple inputs.
+*   **Clean Uninstallation**: Provides a dedicated uninstallation process that removes only the packages installed by this setup script, preventing conflicts with other user-installed software.
+*   **Application Launch**: Facilitates the direct launch of the main GUI application after ensuring all dependencies are met.
 
 ### Installation
+
+To get started with the Subtitle Manager, follow these simple steps:
 
 1.  **Clone the repository**:
     ```bash
     git clone https://github.com/Avielzi/subtitle-manager.git
     cd subtitle-manager
     ```
+
 2.  **Run the setup script**:
+    Execute the setup script to check your environment and install all required dependencies. This command will automatically handle package installations.
     ```bash
     python subtitle_manager_setup.py install
     ```
-    This command will check your Python environment and install all necessary dependencies.
 
 ### Usage
 
-After installation, you can use the `subtitle_manager_setup.py` script with various commands:
+The `subtitle_manager_setup.py` script is the central point for interacting with the Subtitle Manager. It supports several commands:
 
 *   **Interactive Menu (Default)**:
+    Running the script without any arguments will launch an interactive menu, providing options to check status, install, run, or uninstall.
     ```bash
     python subtitle_manager_setup.py
     ```
-    This will launch an interactive menu allowing you to check status, install, run, or uninstall.
 
 *   **Install Dependencies**:
+    Installs all necessary Python packages required by the application.
     ```bash
     python subtitle_manager_setup.py install
     ```
-    Installs all required Python packages.
 
 *   **Run Application**:
+    This command first ensures all dependencies are installed (if not already present) and then launches the main GUI application (`subtitle_manager_gui_single_file_v_1_python.py`).
     ```bash
     python subtitle_manager_setup.py run
     ```
-    Installs dependencies (if not already installed) and then launches the main GUI application (`subtitle_manager_gui_single_file_v_1_python.py`).
 
 *   **Uninstall Packages**:
+    Removes only the Python packages that were installed by this setup script, ensuring a clean removal.
     ```bash
     python subtitle_manager_setup.py uninstall
     ```
-    Removes only the packages installed by this setup script.
 
 *   **Check Status**:
+    Performs a comprehensive system check, verifying the Python version, pip installation, Tkinter availability, and the presence of all required packages.
     ```bash
     python subtitle_manager_setup.py check
     ```
-    Performs a full system check, verifying Python version, pip, Tkinter, and required packages.
 
 ### Dependencies
 
-The `subtitle_manager_setup.py` script manages the following Python packages:
+The `subtitle_manager_setup.py` script manages the following core Python packages:
 
 *   `subliminal`
 *   `babelfish`
 
-It also requires `tkinter` for the GUI, which typically comes with Python but might need separate installation on some Linux distributions (e.g., `sudo apt install python3-tk`).
+Additionally, the project relies on `tkinter` for its graphical user interface. While `tkinter` is typically bundled with Python installations, some Linux distributions might require a separate installation (e.g., `sudo apt install python3-tk`).
 
 ### Contributing
 
-Contributions are welcome! Please feel free to open issues or submit pull requests.
+Contributions to the Subtitle Manager project are highly encouraged! Whether it's bug reports, feature requests, or code contributions, your input is valuable. Please feel free to open issues or submit pull requests on the [GitHub repository](https://github.com/Avielzi/subtitle-manager).
 
 ### License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is released under the [MIT License](LICENSE). For more details, please refer to the `LICENSE` file in the repository.
+
+---
 
 <a name="hebrew"></a>
 
 ## 🇮🇱 עברית
 
-### תיאור הפרויקט
+### סקירת פרויקט
 
-פרויקט זה מספק מנהל כתוביות חזק, שנועד לפשט את תהליך הטיפול בכתוביות לקבצי מדיה. הוא כולל סקריפט התקנה וניהול תלויות כדי להבטיח חווית התקנה והפעלה חלקה. הכלי בנוי בפייתון ומציע פונקציונליות לבדיקת מצב המערכת, התקנת חבילות נדרשות, הפעלת היישום הראשי וביצוע הסרה נקייה.
+**מנהל הכתוביות** הוא כלי חזק מבוסס פייתון שנועד לייעל את תהליך ניהול הכתוביות לקבצי מדיה שונים. הוא מספק פתרון מקיף לבדיקת תאימות מערכת, התקנת תלויות נדרשות, הפעלת היישום הראשי וביצוע הסרה נקייה של רכיביו. פרויקט זה שואף להציע חווית משתמש ידידותית באמצעות ממשק שורת פקודה אינטראקטיבי, המבטיח שמשתמשים יוכלו לתחזק בקלות את סביבת הכתוביות שלהם.
 
 ### תכונות
 
-*   **בדיקת גרסת פייתון**: מבטיח תאימות עם פייתון 3.8 ומעלה.
-*   **ניהול תלויות**: מתקין ועוקב אוטומטית אחר חבילות פייתון נדרשות (`subliminal`, `babelfish`).
-*   **בדיקת Tkinter**: מאמת את זמינות Tkinter עבור ממשק המשתמש הגרפי.
-*   **תפריט אינטראקטיבי**: מספק ממשק שורת פקודה לאינטראקציה קלה.
-*   **הסרה נקייה**: מסיר רק את החבילות שהותקנו על ידי סקריפט ההתקנה הזה, ומונע הפרעה לחבילות אחרות שהותקנו על ידי המשתמש.
-*   **הפעלת יישום**: מתקין תלויות במידת הצורך ולאחר מכן מפעיל את יישום ממשק המשתמש הגרפי הראשי (`subtitle_manager_gui_single_file_v_1_python.py`).
+*   **בדיקת תאימות גרסת פייתון**: מאמת אוטומטית שגרסת הפייתון המותקנת עומדת בדרישת המינימום של 3.8 ומעלה.
+*   **ניהול תלויות אוטומטי**: מתקין ועוקב אחר חבילות פייתון חיוניות כגון `subliminal` ו-`babelfish`, ומבטיח סביבת עבודה תקינה.
+*   **בדיקת Tkinter GUI**: מאשר את זמינות Tkinter, החיוני לממשק המשתמש הגרפי של מנהל הכתוביות.
+*   **ממשק שורת פקודה אינטראקטיבי**: מציע מערכת מונחית תפריטים אינטואיטיבית לאינטראקציה קלה, המאפשרת למשתמשים לבצע פעולות שונות באמצעות קלטים פשוטים.
+*   **הסרה נקייה**: מספק תהליך הסרה ייעודי שמסיר רק את החבילות שהותקנו על ידי סקריפט ההתקנה הזה, ומונע התנגשויות עם תוכנות אחרות שהותקנו על ידי המשתמש.
+*   **הפעלת יישום**: מאפשר הפעלה ישירה של יישום ה-GUI הראשי לאחר הבטחת עמידה בכל התלויות.
 
 ### התקנה
+
+כדי להתחיל עם מנהל הכתוביות, בצע את השלבים הפשוטים הבאים:
 
 1.  **שכפול המאגר**:
     ```bash
     git clone https://github.com/Avielzi/subtitle-manager.git
     cd subtitle-manager
     ```
+
 2.  **הפעלת סקריפט ההתקנה**:
+    הפעל את סקריפט ההתקנה כדי לבדוק את הסביבה שלך ולהתקין את כל התלויות הנדרשות. פקודה זו תטפל אוטומטית בהתקנות חבילות.
     ```bash
     python subtitle_manager_setup.py install
     ```
-    פקודה זו תבדוק את סביבת הפייתון שלך ותתקין את כל התלויות הנדרשות.
 
 ### שימוש
 
-לאחר ההתקנה, תוכל להשתמש בסקריפט `subtitle_manager_setup.py` עם פקודות שונות:
+סקריפט `subtitle_manager_setup.py` הוא נקודת המרכז לאינטראקציה עם מנהל הכתוביות. הוא תומך במספר פקודות:
 
 *   **תפריט אינטראקטיבי (ברירת מחדל)**:
+    הפעלת הסקריפט ללא ארגומנטים תפעיל תפריט אינטראקטיבי, המספק אפשרויות לבדיקת סטטוס, התקנה, הפעלה או הסרה.
     ```bash
     python subtitle_manager_setup.py
     ```
-    זה יפעיל תפריט אינטראקטיבי שיאפשר לך לבדוק סטטוס, להתקין, להפעיל או להסיר התקנה.
 
 *   **התקנת תלויות**:
+    מתקין את כל חבילות הפייתון הנחוצות הנדרשות על ידי היישום.
     ```bash
     python subtitle_manager_setup.py install
     ```
-    מתקין את כל חבילות הפייתון הנדרשות.
 
 *   **הפעלת יישום**:
+    פקודה זו מבטיחה תחילה שכל התלויות מותקנות (אם אינן קיימות כבר) ולאחר מכן מפעילה את יישום ה-GUI הראשי (`subtitle_manager_gui_single_file_v_1_python.py`).
     ```bash
     python subtitle_manager_setup.py run
     ```
-    מתקין תלויות (אם לא הותקנו כבר) ולאחר מכן מפעיל את יישום ממשק המשתמש הגרפי הראשי (`subtitle_manager_gui_single_file_v_1_python.py`).
 
 *   **הסרת חבילות**:
+    מסיר רק את חבילות הפייתון שהותקנו על ידי סקריפט ההתקנה הזה, ומבטיח הסרה נקייה.
     ```bash
     python subtitle_manager_setup.py uninstall
     ```
-    מסיר רק את החבילות שהותקנו על ידי סקריפט ההתקנה הזה.
 
 *   **בדיקת סטטוס**:
+    מבצע בדיקת מערכת מקיפה, המאמתת את גרסת הפייתון, התקנת pip, זמינות Tkinter, ונוכחות כל החבילות הנדרשות.
     ```bash
     python subtitle_manager_setup.py check
     ```
-    מבצע בדיקת מערכת מלאה, מאמת את גרסת הפייתון, pip, Tkinter והחבילות הנדרשות.
 
 ### תלויות
 
-סקריפט `subtitle_manager_setup.py` מנהל את חבילות הפייתון הבאות:
+סקריפט `subtitle_manager_setup.py` מנהל את חבילות הפייתון הליבתיות הבאות:
 
 *   `subliminal`
 *   `babelfish`
 
-הוא דורש גם את `tkinter` עבור ממשק המשתמש הגרפי, אשר בדרך כלל מגיע עם פייתון אך ייתכן שידרוש התקנה נפרדת בהפצות לינוקס מסוימות (לדוגמה, `sudo apt install python3-tk`).
+בנוסף, הפרויקט מסתמך על `tkinter` עבור ממשק המשתמש הגרפי שלו. בעוד ש-`tkinter` בדרך כלל נכלל בהתקנות פייתון, ייתכן שחלק מהפצות לינוקס ידרשו התקנה נפרדת (לדוגמה, `sudo apt install python3-tk`).
 
 ### תרומה לפרויקט
 
-תרומות יתקבלו בברכה! אנא אל תהססו לפתוח בעיות או להגיש בקשות משיכה.
+תרומות לפרויקט מנהל הכתוביות מעודדות מאוד! בין אם מדובר בדיווחי באגים, בקשות לתכונות או תרומות קוד, הקלט שלך חשוב. אל תהססו לפתוח בעיות או להגיש בקשות משיכה ב[מאגר GitHub](https://github.com/Avielzi/subtitle-manager).
 
 ### רישיון
 
-פרויקט זה מורשה תחת רישיון MIT - ראה את קובץ [LICENSE](LICENSE) לפרטים נוספים.
+פרויקט זה מופץ תחת [רישיון MIT](LICENSE). לפרטים נוספים, עיין בקובץ `LICENSE` במאגר.
